@@ -1,0 +1,11 @@
+# node_modules folder
+node_modules/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# npm-debug file
+npm-debug.log
