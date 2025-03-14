@@ -78,6 +78,8 @@ app.get('/', async(req, res) => {
                     await coupon.save();
                 
                     await Users.create({ip : user_ip});
+
+                    res.cookie("last_claim", new Date().toISOString(), { maxAge: 3600000, httpOnly: true });
                 
                     return res.json({
                     message: `You have successfully claimed ${coupon.code}`,
